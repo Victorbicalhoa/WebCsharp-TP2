@@ -1,0 +1,30 @@
+﻿@page
+@model TP2.Pages.Exercicios.Exercicio07.CreateCountryModel
+
+<h2>Cadastro de Países</h2>
+
+<form method="post" class="form-group">
+    @for (int i = 0; i < Model.Countries.Count; i++)
+    {
+        <div class="form-group">
+            <label asp-for="Countries[i].CountryName">Nome do País:</label>
+            <input asp-for="Countries[i].CountryName" class="form-control" required />
+            <span asp-validation-for="Countries[i].CountryName" class="text-danger"></span>
+
+            <label asp-for="Countries[i].CountryCode">Código ISO (2 letras):</label>
+            <input asp-for="Countries[i].CountryCode" class="form-control" required />
+            <span asp-validation-for="Countries[i].CountryCode" class="text-danger"></span>
+        </div>
+    }
+
+    <button type="submit" class="btn btn-primary">Cadastrar Países</button>
+</form>
+
+@if (ViewData["Message"] != null)
+{
+    <p class="response-message">@ViewData["Message"]</p>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,52 @@
+html, body {
+    min-height: 100vh; /* Garante que o corpo da página ocupe a tela toda */
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1; /* Faz com que o conteúdo ocupe o espaço disponível */
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    max-width: 500px;
+    margin: auto;
+}
+
+.text-danger {
+    color: red;
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+}
+
+input.form-control {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button.btn-primary {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block;
+    width: auto;
+    margin: auto;
+}
+
+p.response-message {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: green;
+}
+

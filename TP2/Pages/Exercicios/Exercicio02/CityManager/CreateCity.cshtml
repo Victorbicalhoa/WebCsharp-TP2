@@ -1,0 +1,15 @@
+﻿@page
+@model TP2.Pages.Exercicios.Exercicio02.CityManager.CreateCityModel
+
+<h2>Cadastro de Cidade Turística</h2>
+
+<form method="post">
+    <label for="cityName">Nome da Cidade:</label>
+    <input type="text" id="cityName" name="cityName" required />
+    <button type="submit">Enviar</button>
+</form>
+
+@if (ViewData["Message"] != null)
+{
+    <p><strong>@ViewData["Message"]</strong></p>
+}

@@ -1,0 +1,13 @@
+﻿@page "{cityName}"
+@model TP2.Pages.Exercicios.Exercicio08.CityDetailsModel
+
+<h2>Detalhes da Cidade</h2>
+
+@if (!string.IsNullOrEmpty(Model.CityName))
+{
+    <p class="response-message">Você está vendo detalhes de: @Model.CityName</p>
+}
+else
+{
+    <p class="text-danger">Nenhuma cidade foi especificada.</p>
+}

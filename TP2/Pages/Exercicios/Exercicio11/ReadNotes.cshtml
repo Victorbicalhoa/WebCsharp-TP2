@@ -1,0 +1,20 @@
+﻿@page
+@model TP2.Pages.Exercicios.Exercicio11.ReadNotesModel
+
+<h2>Arquivos Salvos</h2>
+
+<ul>
+    @foreach (var filePath in Model.FileNames)
+    {
+        var fileName = System.IO.Path.GetFileName(filePath);
+        <li>
+            <a asp-page="/Exercicios/Exercicio11/ReadNotes" asp-route-fileName="@fileName">Ver conteúdo de @fileName</a>
+        </li>
+    }
+</ul>
+
+@if (!string.IsNullOrEmpty(Model.FileContent))
+{
+    <h3>Conteúdo do Arquivo:</h3>
+    <pre>@Model.FileContent</pre>
+}

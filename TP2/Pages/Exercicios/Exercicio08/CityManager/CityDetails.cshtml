@@ -1,0 +1,15 @@
+﻿@page
+@model TP2.Pages.Exercicios.Exercicio09.CityListModel
+
+<h2>Lista de Cidades</h2>
+
+<ul>
+    @foreach (var city in Model.Cities)
+    {
+        <li>
+            <a asp-page="/Exercicio09/CityDetails" asp-route-cityName="@city">
+                Ver detalhes de @city
+            </a>
+        </li>
+    }
+</ul>

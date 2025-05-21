@@ -1,0 +1,21 @@
+﻿@page
+@model TP2.Pages.Exercicios.Exercicio03.CityManager.CreateCityModel
+
+<h2>Cadastro de Cidade Turística</h2>
+
+<form method="post">
+    <label for="cityName">Nome da Cidade:</label>
+    <input type="text" id="cityName" asp-for="City.CityName" required />
+    <span asp-validation-for="City.CityName" class="text-danger"></span>
+
+    <button type="submit">Enviar</button>
+</form>
+
+@if (ViewData["Message"] != null)
+{
+    <p><strong>@ViewData["Message"]</strong></p>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
